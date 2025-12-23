@@ -11,7 +11,7 @@ import LaunchAtLogin
 @main
 struct Smile4MeApp: App {
     var body: some Scene {
-        MenuBarExtra("Smile4Me", systemImage: "smiley") {
+        MenuBarExtra("Smile4Me", image: "menuBarIcon") { //image size 32x32 pixel
             VStack(alignment: .leading) {
                 JokeContentView()
                 Divider()
