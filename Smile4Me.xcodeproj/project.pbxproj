@@ -12,12 +12,45 @@
 
 /* Begin PBXFileReference section */
 		BF937C232EF954AE00FC0916 /* Smile4Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smile4Me.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF9DCD612EFA47E2004EFB1E /* Smile4MeiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smile4MeiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BF9DCD712EFA4B20004EFB1E /* Exceptions for "Smile4MeiOS" folder in "Smile4MeiOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BF9DCD602EFA47E2004EFB1E /* Smile4MeiOS */;
+		};
+		BF9DCD752EFA4CE5004EFB1E /* Exceptions for "Smile4Me" folder in "Smile4MeiOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/Joke.swift,
+				"Services and Managers/APIService.swift",
+				"Services and Managers/JokeManager.swift",
+				Views/JokeContentView.swift,
+				Views/JokeView.swift,
+			);
+			target = BF9DCD602EFA47E2004EFB1E /* Smile4MeiOS */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BF937C252EF954AE00FC0916 /* Smile4Me */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BF9DCD752EFA4CE5004EFB1E /* Exceptions for "Smile4Me" folder in "Smile4MeiOS" target */,
+			);
 			path = Smile4Me;
+			sourceTree = "<group>";
+		};
+		BF9DCD622EFA47E2004EFB1E /* Smile4MeiOS */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BF9DCD712EFA4B20004EFB1E /* Exceptions for "Smile4MeiOS" folder in "Smile4MeiOS" target */,
+			);
+			path = Smile4MeiOS;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -31,6 +64,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BF9DCD5E2EFA47E2004EFB1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -38,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				BF937C252EF954AE00FC0916 /* Smile4Me */,
+				BF9DCD622EFA47E2004EFB1E /* Smile4MeiOS */,
 				BF937C242EF954AE00FC0916 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				BF937C232EF954AE00FC0916 /* Smile4Me.app */,
+				BF9DCD612EFA47E2004EFB1E /* Smile4MeiOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +118,28 @@
 			productReference = BF937C232EF954AE00FC0916 /* Smile4Me.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BF9DCD602EFA47E2004EFB1E /* Smile4MeiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF9DCD6B2EFA47E3004EFB1E /* Build configuration list for PBXNativeTarget "Smile4MeiOS" */;
+			buildPhases = (
+				BF9DCD5D2EFA47E2004EFB1E /* Sources */,
+				BF9DCD5E2EFA47E2004EFB1E /* Frameworks */,
+				BF9DCD5F2EFA47E2004EFB1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BF9DCD622EFA47E2004EFB1E /* Smile4MeiOS */,
+			);
+			name = Smile4MeiOS;
+			packageProductDependencies = (
+			);
+			productName = Smile4MeiOS;
+			productReference = BF9DCD612EFA47E2004EFB1E /* Smile4MeiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -87,6 +151,9 @@
 				LastUpgradeCheck = 2610;
 				TargetAttributes = {
 					BF937C222EF954AE00FC0916 = {
+						CreatedOnToolsVersion = 26.1.1;
+					};
+					BF9DCD602EFA47E2004EFB1E = {
 						CreatedOnToolsVersion = 26.1.1;
 					};
 				};
@@ -109,6 +176,7 @@
 			projectRoot = "";
 			targets = (
 				BF937C222EF954AE00FC0916 /* Smile4Me */,
+				BF9DCD602EFA47E2004EFB1E /* Smile4MeiOS */,
 			);
 		};
 /* End PBXProject section */
@@ -121,10 +189,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BF9DCD5F2EFA47E2004EFB1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF937C1F2EF954AE00FC0916 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF9DCD5D2EFA47E2004EFB1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -342,6 +424,89 @@
 			};
 			name = Release;
 		};
+		BF9DCD692EFA47E3004EFB1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T9MD4URZFH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Smile4MeiOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Smile4Me;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.superkookai.Smile4Me;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BF9DCD6A2EFA47E3004EFB1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T9MD4URZFH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Smile4MeiOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Smile4Me;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.superkookai.Smile4Me;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -359,6 +524,15 @@
 			buildConfigurations = (
 				BF937C2F2EF954B000FC0916 /* Debug */,
 				BF937C302EF954B000FC0916 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF9DCD6B2EFA47E3004EFB1E /* Build configuration list for PBXNativeTarget "Smile4MeiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF9DCD692EFA47E3004EFB1E /* Debug */,
+				BF9DCD6A2EFA47E3004EFB1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

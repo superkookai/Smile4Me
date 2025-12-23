@@ -17,6 +17,11 @@ class JokeManager {
         let urlString = "https://v2.jokeapi.dev/joke/\(category)?lang=\(language)&blacklistFlags=nsfw,religious,political,racist,sexist,explicit"
         logger.info("\(urlString)")
         
-        return try await service.getJoke(from: urlString)
+        return try await service.getJSON(from: urlString)
+    }
+    
+    func getInfo() async throws -> Info {
+        let urlString = "https://v2.jokeapi.dev/info"
+        return try await service.getJSON(from: urlString)
     }
 }

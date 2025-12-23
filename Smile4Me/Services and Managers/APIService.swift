@@ -8,7 +8,7 @@
 import Foundation
 
 class APIService {
-    func getJoke(from url: String) async throws(APIError) -> Joke {
+    func getJSON<T: Decodable>(from url: String) async throws(APIError) -> T {
         guard let url = URL(string: url) else { throw .invalidURL }
         do {
             let (data, response) = try await URLSession.shared.data(from: url)
@@ -16,7 +16,7 @@ class APIService {
                 throw APIError.responseError
             }
             do {
-                let decodedJokeData = try JSONDecoder().decode(Joke.self, from: data)
+                let decodedJokeData = try JSONDecoder().decode(T.self, from: data)
                 return decodedJokeData
             } catch {
                 throw APIError.decodingError(error.localizedDescription)

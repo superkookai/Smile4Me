@@ -1,0 +1,32 @@
+//
+//  AvailableLanguage.swift
+//  Smile4Me
+//
+//  Created by Weerawut on 23/12/2568 BE.
+//
+
+
+import Foundation
+
+struct AvailableLanguage: Identifiable, Hashable, Comparable {
+    var id: Self { self }
+    let locale: Locale.Language
+
+    func localizedName() -> String {
+        let locale = Locale.current
+        let shortName = shortName()
+
+        guard let localizedName = locale.localizedString(forLanguageCode: shortName) else {
+            return "Unknown language code"
+        }
+        return "\(localizedName) (\(shortName))"
+    }
+
+    func shortName() -> String {
+        "\(locale.languageCode ?? "")-\(locale.region ?? "")"
+    }
+
+    static func <(lhs: AvailableLanguage, rhs: AvailableLanguage) -> Bool {
+        return lhs.localizedName() < rhs.localizedName()
+    }
+}

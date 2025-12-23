@@ -13,7 +13,7 @@
       "size" : "16x16"
     },
     {
-      "filename" : "mac32.png",
+      "filename" : "mac32 1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
@@ -37,7 +37,7 @@
       "size" : "128x128"
     },
     {
-      "filename" : "mac256.png",
+      "filename" : "mac256 1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
@@ -49,13 +49,13 @@
       "size" : "256x256"
     },
     {
-      "filename" : "mac512.png",
+      "filename" : "mac512 1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
-      "filename" : "mac1024.png",
+      "filename" : "appstore1024.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"
