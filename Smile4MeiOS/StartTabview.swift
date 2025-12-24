@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct StartTabview: View {
+    @Environment(Router.self) var router
+    
     var body: some View {
-        TabView {
-            Tab("Jokes", systemImage: "face.smiling") {
+        TabView(selection: Bindable(router).selectedTab) {
+            Tab("Jokes", systemImage: "face.smiling", value: 0) {
                 JokeContentView()
             }
             
-            Tab("Info", systemImage: "info.circle") {
+            Tab("Info", systemImage: "info.circle", value: 1) {
                 InfoView()
             }
         }
@@ -23,4 +25,5 @@ struct StartTabview: View {
 
 #Preview {
     StartTabview()
+        .environment(Router())
 }

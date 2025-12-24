@@ -19,7 +19,7 @@ struct Joke: Decodable, Equatable {
     var fullJoke: String {
         switch type {
         case .single: return joke ?? ""
-        case .twopart: return (setup ?? "") + "\n" + (delivery ?? "")
+        case .twopart: return (setup ?? "") + "\n\n" + (delivery ?? "")
         }
     }
     

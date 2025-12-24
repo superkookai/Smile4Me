@@ -15,6 +15,9 @@ struct JokeContentView: View {
     @State private var errorMessage = ""
     @State private var fetching = false
     @Environment(\.openURL) var openURL
+    #if os(iOS)
+    @Environment(Router.self) var router
+    #endif
     
     var body: some View {
         NavigationStack {
@@ -107,6 +110,20 @@ struct JokeContentView: View {
         .onChange(of: category) {
             Task { await getJoke() }
         }
+        #if os(iOS)
+        .onChange(of: router.components) { _, componentsString in
+            if let componentsString,
+               let id = componentsString.components(separatedBy: "-").first, let langauge = componentsString.components(separatedBy: "-").last {
+                let category = componentsString.components(separatedBy: "-")[1]
+                Task {
+                    if let joke = try? await jokeManager.getLinkJoke(category: category, language: langauge, id: id) {
+                        self.joke = joke
+                        router.components = nil
+                    }
+                }
+            }
+        }
+        #endif
     }
     
     private func getJoke() async {
@@ -126,6 +143,9 @@ struct JokeContentView: View {
 
 #Preview {
     JokeContentView()
+    #if os(iOS)
+        .environment(Router())
+    #endif
 }
 
 struct FirstOnAppearModifier: ViewModifier {
