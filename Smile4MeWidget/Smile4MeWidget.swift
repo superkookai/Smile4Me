@@ -9,13 +9,14 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
+    let jokeManager = JokeManager()
+    
     func placeholder(in context: Context) -> JokeEntry {
         JokeEntry(date: Date(), joke: Joke.single)
     }
     
     //When adding the Widget
     func getSnapshot(in context: Context, completion: @escaping (JokeEntry) -> ()) {
-        let jokeManager = JokeManager()
         Task {
             let joke = try await jokeManager.getJoke()
             let entry = JokeEntry(date: Date(), joke: joke)
@@ -25,7 +26,6 @@ struct Provider: TimelineProvider {
     
     //Real one after add the Widget
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        let jokeManager = JokeManager()
         var entries: [JokeEntry] = []
         
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.

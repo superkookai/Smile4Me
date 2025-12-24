@@ -27,7 +27,6 @@ class JokeManager {
     
     func getLinkJoke(category: String, language: String, id: String) async throws -> Joke {
         let urlString = "https://v2.jokeapi.dev/joke/\(category)?lang=\(language)&idRange=\(id)"
-        let service = APIService()
         return try await service.getJSON(from: urlString)
     }
 }
